@@ -1,0 +1,48 @@
+// Styling for the call to action section
+section.cta {
+    position: relative;
+    padding: 250px 0;
+    background-image: url('../img/bg-cta.png');
+    background-position: center;
+    @include background-cover;
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        h2 {
+            font-size: 50px;
+            max-width: 450px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: white;
+        }
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 80px;
+            }
+        }
+    }
+    .badges {
+        .badge-link {
+            display: block;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                height: 60px;
+            }
+            @media(min-width: 768px) {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: fade-out(black, .2);
+    }
+}
